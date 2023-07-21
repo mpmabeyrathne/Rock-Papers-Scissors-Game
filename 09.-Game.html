@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Rock-Papers-Scissors</title>
+    <link rel="stylesheet" href="./stlyes/styles_game.css">
+</head>
+
+<body>
+
+    <p class="topic-1">Rock Paper Scissors</p>
+
+    <button class="move-button" onclick="
+       playGame('Rock');
+    "><img class="move-icon" src="./img/rock-emoji.png"></button>
+
+    <button class="move-button" onclick="
+        playGame('Paper');
+    "><img class="move-icon" src="./img/paper-emoji.png"></button>
+
+
+    <button class="move-button" onclick="
+        playGame('Scissors');
+    "><img class="move-icon" src="./img/scissors-emoji.png"></button>
+
+    <p class="previousResult"></p>
+    <p class="resultChooseBy"></p>
+
+    <p class="result-sec"></p>
+
+    <button onclick="
+         playResults.Ties = 0;
+         playResults.Wins = 0;
+         playResults.Losses = 0;
+         localStorage.removeItem('playResults');
+         updateScoreElement();
+        
+    " class="reset-button">Reset Results</button>
+
+
+    <script src="./js/game.js"></script>
+
+</body>
+
+</html>
